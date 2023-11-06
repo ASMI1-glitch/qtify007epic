@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+.card-image > img {
+  height: 170px;
+  width: 100%;
+}
+
 .card-text {
   background-color: var(--css-black);
   font-size: 10px;
@@ -26,4 +31,5 @@
 
 .title {
   margin-top: 6px;
+  font-size: 14px;
 }
