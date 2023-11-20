@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.card-image > img {
+.card-image img {
   height: 170px;
   width: 100%;
 }

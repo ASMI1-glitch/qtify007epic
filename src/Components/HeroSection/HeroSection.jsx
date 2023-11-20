@@ -2,7 +2,10 @@ import './HeroSection.css';
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <img src="HeroImage.png" alt="Hero Image" />
+      <img
+        src="HeroImage.png"
+        alt="100 Thousand Songs, ad-free Over thousands podcast episodes"
+      />
     </div>
   );
 };
