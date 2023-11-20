@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/HeroSection/HeroSection';
-import Section from './Components/Section/Section';
+import CardSection from './Components/CardSection/CardSection';
 import { getTopSongsData, getNewSongsData, getSongsData } from './utils/util';
 
 function App() {
@@ -27,9 +27,7 @@ function App() {
       <div>
         <Navbar />
         <HeroSection />
-        <Section name="Top Albums" songsData={topSongsData} />
-        <Section name="New Albums" songsData={newSongsData} />
-        <Section name="Songs" songsData={songsData} />
+        <CardSection name="Top Albums" songsData={topSongsData} />
       </div>
     </>
   );

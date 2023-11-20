@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
-import Card from '../Card/Card';
-import './Section.css';
+import CardCarouselSection from '../CardCarouselSection/CardCarouselSection';
+import CardGridSection from '../CardGridSection/CardGridSection';
+import './CardSection.css';
 
-const Section = ({ name, songsData }) => {
+const CardSection = ({ name, songsData }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
@@ -21,21 +22,10 @@ const Section = ({ name, songsData }) => {
       </div>
       <div className="card-container">
         {isCollapsed ? (
-          <div></div>
+          <CardCarouselSection name={name} songsData={songsData} />
         ) : (
           <>
-            {songsData.map((song) => (
-              <Card
-                key={song.id}
-                image={song.image}
-                text={
-                  song.follows !== undefined
-                    ? `${song.follows} Follows`
-                    : `${song.likes} Likes`
-                }
-                title={song.title}
-              />
-            ))}
+            <CardGridSection songsData={songsData} />
           </>
         )}
       </div>
@@ -43,4 +33,4 @@ const Section = ({ name, songsData }) => {
   );
 };
 
-export default Section;
+export default CardSection;

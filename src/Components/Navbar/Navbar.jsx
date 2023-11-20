@@ -1,4 +1,3 @@
-import Button from '../Button/Button';
 import SearchBox from '../SearchBox/SearchBox';
 import Logo from '../Logo/Logo';
 import './Navbar.css';
@@ -8,7 +7,7 @@ const Navbar = () => {
     <nav>
       <Logo />
       <SearchBox />
-      <Button>Give Feedback</Button>
+      <button className="nav-btn">Give Feedback</button>
     </nav>
   );
 };
