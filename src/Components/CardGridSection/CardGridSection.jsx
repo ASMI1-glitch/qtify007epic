@@ -15,6 +15,7 @@ const CardGridSection = ({ songsData }) => {
               : `${song.likes} Likes`
           }
           title={song.title}
+          tooltipText={song.songs?.length}
         />
       ))}
     </div>
