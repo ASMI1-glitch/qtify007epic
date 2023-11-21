@@ -27,6 +27,15 @@ const getSongsData = async () => {
   }
 };
 
+const getGenresData = async () => {
+  try {
+    const genres = await getData('https://qtify-backend-labs.crio.do/genres');
+    return genres.data;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 const getData = async (url) => {
   try {
     const response = await fetch(url);
@@ -37,4 +46,4 @@ const getData = async (url) => {
   }
 };
 
-export { getTopSongsData, getNewSongsData, getSongsData };
+export { getTopSongsData, getNewSongsData, getSongsData, getGenresData };

@@ -29,6 +29,7 @@ function App() {
         <HeroSection />
         <CardSection name="Top Albums" songsData={topSongsData} />
         <CardSection name="New Albums" songsData={newSongsData} />
+        <CardSection name="Songs" songsData={songsData} showFilters />
       </div>
     </>
   );

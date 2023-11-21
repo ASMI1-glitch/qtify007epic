@@ -1,0 +1,37 @@
+.filters {
+  display: flex;
+  color: var(--css-white);
+  gap: 10px;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filters p {
+  border-bottom: 5px transparent solid;
+  transition: all ease-in 0.4s;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.filters p:active {
+  background-color: rgba(256, 256, 256, 0.1);
+}
+
+.active {
+  position: relative;
+  transition: all ease-in-out 0.9s;
+}
+.active::after {
+  position: absolute;
+  content: '';
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  height: 6px;
+  background-color: var(--css-primary);
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
