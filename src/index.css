@@ -70,3 +70,13 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: var(--css-black);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: var(--css-primary);
+}
