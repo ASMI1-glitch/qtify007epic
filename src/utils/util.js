@@ -5,7 +5,8 @@ const getTopSongsData = async () => {
     );
     return songs;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+    return [];
   }
 };
 const getNewSongsData = async () => {
@@ -15,7 +16,8 @@ const getNewSongsData = async () => {
     );
     return songs;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+    return [];
   }
 };
 const getSongsData = async () => {
@@ -23,7 +25,8 @@ const getSongsData = async () => {
     const songs = await getData('https://qtify-backend-labs.crio.do/songs');
     return songs;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+    return [];
   }
 };
 
@@ -32,7 +35,8 @@ const getGenresData = async () => {
     const genres = await getData('https://qtify-backend-labs.crio.do/genres');
     return genres.data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+    return [];
   }
 };
 
@@ -43,6 +47,7 @@ const getData = async (url) => {
     return data;
   } catch (error) {
     console.error(error);
+    return [];
   }
 };
 
